@@ -297,49 +297,81 @@ export default function InvoiceEditor() {
               <div className="flex gap-1.5">
                 <button
                   type="button"
-                  className="rounded border border-[var(--border-color)] px-2 py-1.5 text-[10px]"
+                  className="btn btn_bg_primary flex gap-2"
                   onClick={() => setLines((prev) => [...prev, emptyLine()])}
                 >
                   <svg
-                className="w-4 h-4 text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5 12h14m-7 7V5"
-                />
-              </svg> Add Row
+                    className="w-4 h-4 text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 12h14m-7 7V5"
+                    />
+                  </svg>
+                  Add Row
                 </button>
 
                 <button
                   type="button"
-                  className="rounded border border-[var(--border-color)] px-2 py-1.5 text-[10px]"
+                  className="btn flex gap-2 btn_bg_light hover:text-white"
                   onClick={() =>
                     setLines((prev) => [...prev, { ...prev[prev.length - 1] }])
                   }
                   disabled={lines.length === 0}
                 >
-                  ▣ Copy
+                  <svg
+                    className="w-4 h-4 text-gray-800 hover:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"
+                    />
+                  </svg>
+                  Copy
                 </button>
 
                 <button
                   type="button"
-                  className="rounded border border-[var(--border-color)] px-2 py-1.5 text-[10px]"
+                  className="btn flex gap-2 btn_bg_light hover:text-white"
                   onClick={() =>
                     setLines((prev) =>
                       prev.length > 1 ? prev.slice(0, -1) : [emptyLine()],
                     )
                   }
                 >
-                  ▤ Remove Last
+                  <svg
+                    className="w-4 h-4 text-gray-800 hover:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M8.586 2.586A2 2 0 0 1 10 2h4a2 2 0 0 1 2 2v2h3a1 1 0 1 1 0 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8a1 1 0 0 1 0-2h3V4a2 2 0 0 1 .586-1.414ZM10 6h4V4h-4v2Zm1 4a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Zm4 0a1 1 0 1 0-2 0v8a1 1 0 1 0 2 0v-8Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Remove Last
                 </button>
               </div>
             </div>

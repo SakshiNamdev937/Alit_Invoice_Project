@@ -144,9 +144,7 @@ text-transform: capitalize !important;
   background: var(--background);
   color: var(--text-primary);
 }
-.btn:hover {
-  background: var(--button-hover);
-}
+
 
 a,
 footer p {
